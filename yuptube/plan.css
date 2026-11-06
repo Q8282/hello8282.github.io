@@ -354,3 +354,51 @@ h4{font-size:19px;font-weight:700;letter-spacing:-0.02em;margin-bottom:8px}
   .g3,.g4,.bm,.names,.ep,.shorts,.avoid,.tone,.emo,.layers,.funnel,.tl,.pc,.runsheet{grid-template-columns:1fr 1fr}
   .tl::before{display:none}
 }
+
+/* ---------- mobile only (≤640px) — PC·태블릿은 영향 없음 ---------- */
+@media (max-width:640px){
+  /* 박스형 그리드: 전부 한 줄에 하나씩, 위에서 아래로 */
+  .g2,.g3,.g4,.bm,.names,.ep,.avoid,.tone,.emo,.layers,.funnel,.tl,.pc,.nums,.duo,.strip,.shorts{grid-template-columns:1fr}
+
+  /* 이미지 1 · 표지: 오른쪽 폴라로이드 + 스티커 50px 아래로 */
+  .cover .photos{height:610px}
+  .cover .p2{top:220px}
+  .cover .s2{top:170px}
+
+  /* 이미지 2 · 3단계 레이어: 세로로 1→2→3, 화살표는 아래 방향 */
+  .layer .arrow{right:auto;left:50%;top:auto;bottom:-14px;transform:translateX(-50%) rotate(90deg)}
+
+  /* 이미지 3 · 이미지 축 다이어그램: 모바일 전용 레이아웃 (사진 위, 카드 4장 아래) */
+  .axes{height:auto;background:var(--p50);padding:30px 18px 18px;display:flex;flex-direction:column;align-items:center;gap:10px}
+  .axes .center{position:relative;left:auto;top:auto;transform:none;width:150px;height:150px;margin-bottom:10px;flex:none}
+  .axes .ax{position:static;transform:none;width:100%;background:#fff;border:1px solid var(--line);border-radius:18px;padding:16px 18px}
+  .axes .top{order:1}.axes .lft{order:2}.axes .rgt{order:3}.axes .bot{order:4}
+
+  /* 이미지 4 · 강점 위, 약점 아래 (위 공통 규칙으로 1열) */
+
+  /* 퍼널: 세로로 쌓일 때 모서리 정리 */
+  .fn:nth-child(1){border-radius:26px 26px 0 0;border:1px solid var(--line);border-bottom:none}
+  .fn:nth-child(2){border-left:1px solid var(--line);border-right:1px solid var(--line)}
+  .fn:nth-child(3){border-radius:0 0 26px 26px}
+
+  /* 이미지 6 · 회차 구조: 한 줄에 하나, 시간 | 내용 */
+  .runsheet{grid-template-columns:1fr}
+  .runsheet div{display:flex;align-items:center;gap:14px;padding:12px 16px}
+  .runsheet div b{flex:none;width:58px}
+
+  /* 쇼츠 카드: 1열일 때 세로로 너무 길어지지 않게 */
+  .sh{aspect-ratio:auto;min-height:150px;gap:14px}
+
+  /* 편성 비율 바: 좁은 화면에서 넘치지 않게 */
+  .mix{height:auto;flex-direction:column;border-radius:16px}
+  .mix div{padding:10px 16px;flex:none !important}
+
+  /* 넘침 정리: 브랜드 히어로 · 컬러 칩 */
+  .brand-hero .l{padding:36px 24px}
+  .brand-hero .r{min-height:340px}
+  .wordmark{font-size:64px}
+  .wordmark span{font-size:20px;margin-left:6px}
+  .slogan{font-size:22px}
+  .swatches{flex-wrap:wrap}
+  .swatches div{flex:1 1 calc(33% - 10px);min-width:0}
+}
