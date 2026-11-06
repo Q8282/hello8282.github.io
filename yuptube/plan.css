@@ -408,6 +408,12 @@ h4{font-size:19px;font-weight:700;letter-spacing:-0.02em;margin-bottom:8px}
 
   /* 레퍼런스 채널 썸네일: 세로 3:4 */
   .bm .c .th{height:auto;aspect-ratio:3/4}
+
+  /* 상단 메뉴 4개가 한 화면에 다 보이도록 */
+  .nav .wrap{gap:8px;padding:0 12px}
+  .nav .logo{font-size:22px}
+  .nav ol{gap:0}
+  .nav a.lk{padding:5px 6px;font-size:12px;letter-spacing:-0.04em}
 }
 
 /* nav 로고: "윱"만 진한 색 + 더 굵게 */
