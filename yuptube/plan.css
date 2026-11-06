@@ -409,3 +409,6 @@ h4{font-size:19px;font-weight:700;letter-spacing:-0.02em;margin-bottom:8px}
   /* 레퍼런스 채널 썸네일: 세로 3:4 */
   .bm .c .th{height:auto;aspect-ratio:3/4}
 }
+
+/* nav 로고: "윱"만 진한 색 + 더 굵게 */
+.nav .logo b{color:var(--ink);font-weight:700;-webkit-text-stroke:.6px var(--ink)}
