@@ -401,4 +401,11 @@ h4{font-size:19px;font-weight:700;letter-spacing:-0.02em;margin-bottom:8px}
   .slogan{font-size:22px}
   .swatches{flex-wrap:wrap}
   .swatches div{flex:1 1 calc(33% - 10px);min-width:0}
+
+  /* 인용 박스: 큰 따옴표 위 여백 */
+  .quote{padding:72px 28px 34px}
+  .quote::before{left:22px;top:14px}
+
+  /* 레퍼런스 채널 썸네일: 세로 3:4 */
+  .bm .c .th{height:auto;aspect-ratio:3/4}
 }
